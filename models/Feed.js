@@ -28,16 +28,15 @@ exports.add = function (url, cb) {
 
         for(let i in rss) feed[i] = rss[i];
     });
-    FeedModel.save(function (err) {
+    feed.save(function (err) {
         if(err) console.log(err);
-        console.log("new created");
     })
 };
 
 exports.getFeed = function () {
     FeedModel.findOne(function (err, res) {
         if(err) console.log(err);
-        console.log(res);
+        return res;
     })
 };
 

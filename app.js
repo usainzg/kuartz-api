@@ -8,6 +8,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const newsRouter = require('./middlewares/News');
+const usersRouter = require('./middlewares/Users');
+
 const cronRss = require('./crons/NewsCron');
 
 // middleware
@@ -17,6 +19,8 @@ app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.json({ type: 'application/json' }));
 
 app.use('/news', newsRouter);
+app.use('/users', usersRouter);
+
 app.use(function(req, res){
     res.status(404).end('404!');
 });

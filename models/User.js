@@ -15,5 +15,21 @@ const UserSchema = Schema({
 
 //Exporting our model
 const UserModel = mongoose.model('User', UserSchema);
-
 exports.model = UserModel;
+
+exports.addUser = function (user, cb) {
+    usr = new UserSchema(user);
+
+    usr.save(function (err) {
+        if(err) return cb(err, null);
+        return cb(err, "User Created");
+    })
+
+};
+
+exports.getUser = function (token, cb) {
+    UserModel.findOne({ token: token }, function (err, res) {
+        if(err) return cb(err, null);
+        return cb(err, res);
+    })
+};
