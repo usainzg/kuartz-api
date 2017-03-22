@@ -1,0 +1,16 @@
+{
+  "name": "kuartz-api",
+  "author": "Unai Sainz de la Maza Gamboa",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1",
+    "express": "^4.15.2",
+    "feedme": "^1.0.0",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.9.0",
+    "morgan": "^1.8.1",
+    "node-schedule": "^1.2.1",
+    "nodemon": "^1.11.0"
+  }
+}
