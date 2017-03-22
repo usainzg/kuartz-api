@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const scrapper = require('../crons/Scrapper');
 
-// Defining schema for our News API
+// Defining schema for our Feed API
 const FeedSchema = Schema({
     url: String,
     name: { type: String, default: "Loading..." },
